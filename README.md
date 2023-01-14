@@ -6,6 +6,8 @@ show search engine that showcases information related to different television se
 ✅ Users can explore different TV shows and filter them by genre: drama, comedy, crime, action, etc.  
 ✅ Users can access information related to a specific TV show including plot, ratings, cast list, trailer, and more.  
 ✅ uthenticated users can add or delete TV shows & movies from their personal watchlist.
+✅ The app is fully responsive and it adapts to any screen size. 
+
 
 <br/>
 :link: Link to the live project: [Link](https://netflix-is.web.app/#/)  
