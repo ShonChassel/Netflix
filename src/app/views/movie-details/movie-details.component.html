@@ -1,0 +1,26 @@
+<section class="movie-details">
+    <div class="movie-image"
+      style="background-image: url('https://image.tmdb.org/t/p/original{{movie?.backdrop_path}}'); 
+      background-size: cover;
+      background-position: inherit;">
+    </div>
+
+  <div class="detail-contents conainer">
+      <h1 class="movie-title">
+        {{movie?.title || movie?.name}}
+      </h1>
+    
+
+    <div class="detail-btns">
+      <button class="detail-btn">Play</button>
+      <button class="detail-btn">My List</button>
+    </div>
+
+      <h1 class="movie-description">{{truncate(movie?.overview,150)}}</h1>
+  </div>
+    <!-- <button (click)="onBack()">Back</button> -->
+    <div class="details-fadeBottom"></div>
+</section>
+
+
+

@@ -1,0 +1,12 @@
+<section>
+    <movie-details></movie-details>
+    <span *ngFor="let movies of moviesData  ; let i =  index">
+        <!-- <span *ngFor="let title of moviesTitles "> -->
+<!-- {{movies | json}} -->
+        <movie-list [movies]="movies" [title]="moviesTitles[i]" [boolean]="boolean[i]"></movie-list>
+</span>
+        <!-- <movie-filter></movie-filter> -->
+    <!-- <movie-list (onRemove)="onRemoveMovie($event)" [movies]="movies$ | async"></movie-list> -->
+    <!-- <movie-list [title]="'NETFLIX ORIGINALS'" [fetchUrl]="fetchNetflixOriginals"></movie-list> -->
+    <!-- <movie-list [title]="'Trending Now '" [fetchUrl]="fetchTopRated"></movie-list> -->
+</section>

@@ -1,0 +1,33 @@
+<section class="signup-screen">
+
+    <div class="login-content">
+
+
+
+        <div class="login-modal">
+            <form (ngSubmit)="onSaveUser()">
+                <h1>Sign In</h1>
+                <input [(ngModel)]="user.name"*ngIf="isSignUp" placeholder="Username" type="text" name="name" id="name"/>
+                <input [(ngModel)]="user.email" placeholder="Email" type="email" name="email" id="email"/>
+                <input [(ngModel)]="user.password" placeholder="Password" type="password" name="password" id="password" />
+                <button type="submit">Sign In</button>
+
+                <h4>{{ !isSignUp ? 'New to Netflix? ' : '' }}<span (click)="setSignUp()">{{ !isSignUp ? 'Sign Up now.' :  'Sign In' }}</span>
+                </h4>
+            </form>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="login-cover-img"></div>
+    <img src="https://assets.nflxext.com/ffe/siteui/vlv3/935156fb-9579-4fc2-ad94-70680402b8ef/b75fd699-d3ac-4ec7-8f59-2b2d15d2f2dd/IL-en-20230109-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+        alt="">
+</section>

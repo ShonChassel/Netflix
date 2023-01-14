@@ -1,0 +1,47 @@
+header {
+  background-color: transparent;
+  bottom: 0;
+  height: 5rem;
+  left: 0;
+  margin: 0 auto;
+  // max-width: 1920px;
+  padding-top: 20px;
+  position: relative;
+  right: 0;
+  top: 13px;
+  transition: background-color 0.5s;
+  width: 100%;
+  z-index: 10;
+  .header-main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    svg {
+      height: 2.25rem;
+      width: 8.375rem;
+      fill: #e50914;
+      line-height: normal;
+      outline-width: 0;
+    }
+    button {
+      background-color: #e50914;
+      float: right;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: normal;
+      padding: 7px 17px;
+      border-radius: 3px;
+      color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0);
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+    img {
+      float: right;
+      height: 2.25rem;
+      margin-left: 10px
+    }
+  }
+}

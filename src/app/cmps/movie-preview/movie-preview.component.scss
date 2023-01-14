@@ -1,0 +1,47 @@
+.movie-preview {
+    
+  .info {
+    width: 100%;
+    transition: transform 450ms;
+    img {
+      max-height: 150px;
+      margin-right: 10px;
+    }
+    .img-posterLarge{
+      max-height: 210px;
+    }
+  }
+  .info:hover{
+    transform: scale(1.08);
+    opacity: 1;
+  }
+
+  .actions {
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+    transform: translateX(-10%);
+    transition-duration: 0.3s;
+    transition-property: transform, opacity;
+
+    .remove-btn {
+      color: white;
+      width: 2em;
+      height: 2em;
+      background-color: inherit;
+      border-radius: 100%;
+      border: 1px solid rgb(255, 255, 255);
+      transition: 0.15s;
+      cursor: pointer;
+      &:hover {
+        background-color: orangered;
+        color: white;
+      }
+    }
+  }
+
+  &:hover .info .actions {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
