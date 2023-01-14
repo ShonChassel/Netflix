@@ -1,6 +1,6 @@
-# :tv: Bitcoin
+# :tv: Netflix
 
-Bitcoin is a Digital wallet App.
+Netflix is a movies  App.
 
 ✅ Users can search their contacts using the search bar.  
 ✅ Users can explore different contacts filter them by filterModal.  
@@ -11,7 +11,7 @@ Bitcoin is a Digital wallet App.
 <br/>
 :link: Link to the live project: [Link](https://shonchassel.github.io/Bitcoin/#/)  
 <br/>
-<img src='bitcoin-app.PNG'/>
+<img src='netflix.PNG'/>
 <br/>
 
 ## My Process
