@@ -1,27 +1,29 @@
-# MyApp
+# :tv: Bitcoin
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+Bitcoin is a Digital wallet App.
 
-## Development server
+✅ Users can search their contacts using the search bar.  
+✅ Users can explore different contacts filter them by filterModal.  
+✅ Users can buy Bitcoin.  
+✅ users can transfer money to their contacts.  
+✅ The app is fully responsive and it adapts to any screen size.  
+✅ The app was developed while considering the Web Content Accessibility Guidelines (WCAG).  
+<br/>
+:link: Link to the live project: [Link](https://shonchassel.github.io/Bitcoin/#/)  
+<br/>
+<img src='bitcoin-app.PNG'/>
+<br/>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## My Process
 
-## Code scaffolding
+I developed the project over the course of approximately A week and a half. In order to learn as much as I can from the development of this project, I implemented certain features from scratch including accessible and scrollable tabs, a carousel functionality, and infinite loading.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Tools
 
-## Build
+After designing a prototype of the application using Adobe XD, I started developing the app using the following technologies:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Vue.js 
+- javascript.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- SCSS modules (CSS grid & CSS Flexbox & Media queries)
+- Vue router, Font Awesome (Icons)
