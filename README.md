@@ -4,7 +4,6 @@ show search engine that showcases information related to different television se
 
 ✅ Users can search TV shows & movies using the search bar..  
 ✅ Users can explore different TV shows and filter them by genre: drama, comedy, crime, action, etc.  
-✅ The app is fully responsive and it adapts to any screen size. 
 ✅ Users can access information related to a specific TV show including plot, ratings, cast list, trailer, and more.  
 ✅ uthenticated users can add or delete TV shows & movies from their personal watchlist.
 
