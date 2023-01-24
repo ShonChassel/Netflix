@@ -10,7 +10,7 @@ show search engine that showcases information related to different television se
 
 
 <br/>
-:link: Link to the live project: [Link](https://netflix-is.web.app/#/)  
+:link: Link to the live project: [Link](https://netflix-ashen-pi.vercel.app/#/)  
 <br/>
 <img src='netflix.PNG'/>
 <br/>
