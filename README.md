@@ -12,7 +12,7 @@ show search engine that showcases information related to different television se
 <br/>
 :link: Link to the live project: [Link](https://netflix-ashen-pi.vercel.app/#/)  
 <br/>
-<img src='net cover.PNG'/>
+<img src='net cove.PNG'/>
 <br/>
 
 ## My Process
