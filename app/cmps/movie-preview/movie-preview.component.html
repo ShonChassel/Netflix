@@ -1,0 +1,13 @@
+<section  [routerLink]="['/movie', movie.id]" class="movie-preview">
+    <section class="info">
+
+        <img class="img-poster {{boolean && 'img-posterLarge'}}"
+        src="https://image.tmdb.org/t/p/original/{{boolean ? movie.poster_path : movie.backdrop_path}}" 
+        alt="{{movie.name}}">
+    </section>
+        
+        <!-- <section class="actions">
+            <button (click)="onRemoveMovie($event)" class="remove-btn">X</button>
+        </section> -->
+    <!-- <img src="{{movie.poster_path}}" alt=""> -->
+</section>

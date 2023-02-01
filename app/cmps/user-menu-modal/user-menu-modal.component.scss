@@ -1,0 +1,20 @@
+.user-menu-modal {
+  right: 19px;
+  opacity: 1;
+  position: absolute;
+  width: 156px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  top: 75px;
+  height: 100px;
+  p {
+    cursor: pointer;
+  }
+  p:hover{
+    text-decoration: underline;
+  }
+}
+
+// .user-menu-modal:hover {
+//   // opacity: 1;
+// }

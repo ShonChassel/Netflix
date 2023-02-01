@@ -1,0 +1,11 @@
+<section>
+    <movie-details></movie-details>
+    <span>
+        <top-ten></top-ten>
+    </span>
+    <span *ngFor="let movies of moviesData  ; let i =  index">
+    <movie-list [movies]="movies" [title]="moviesTitles[i]" [boolean]="boolean[i]"></movie-list>
+   </span>
+
+   
+</section>
