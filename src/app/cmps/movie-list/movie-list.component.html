@@ -1,4 +1,4 @@
 <h1>{{this.title}}</h1>
 <section class="movie-list">
-    <movie-preview (onRemove)="onRemove.emit($event)" *ngFor="let movie of movies" [movie]="movie" [boolean]="boolean"></movie-preview>
+    <movie-preview (onRemove)="onRemove.emit($event)" *ngFor="let movie of movies" [movie]="movie" [boolean]="boolean" ></movie-preview>
 </section>

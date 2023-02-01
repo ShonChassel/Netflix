@@ -17,6 +17,8 @@ export class AppHeaderComponent implements OnInit, OnChanges {
   ) {}
 
   logInUser!: User;
+  isMenuOpen:boolean = false;
+
   subscription!: Subscription;
 
   ngOnInit(): void {
@@ -30,9 +32,14 @@ export class AppHeaderComponent implements OnInit, OnChanges {
     console.log('SimpleChanges', changes);
   }
 
+  setIsMenuOpen(){
+    this.isMenuOpen = !this.isMenuOpen
+  }
 
   getLoggedinUser() {
     let user: any = this.userService.getLoggedinUser();
     this.logInUser = user;
   }
+
+  url="my-app/src/assets/svg/Netflix-9.svg"
 }

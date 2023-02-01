@@ -9,22 +9,19 @@ import { MovieService } from 'src/app/services/movie.service';
   styleUrls: ['./movie-list.component.scss'],
 })
 export class MovieListComponent implements OnInit {
+  constructor(private movieService: MovieService) {}
 
-  constructor(
-    private movieService: MovieService,
-  ) {}
-
-  @Input() movies!:any;
+  @Input() movies!: any;
   // @Input() fetchUrl!: string;
   @Input() title!: string;
   @Input() boolean!: boolean;
   @Output() onRemove = new EventEmitter<string>();
 
   ngOnInit(): void {
-console.log("movies",this.movies);
-    
-  //   this.movieService.query()
-  //   this.getMovies()
+    console.log('movies', this.movies);
+
+    //   this.movieService.query()
+    //   this.getMovies()
   }
 
   async getMovies() {

@@ -16,45 +16,31 @@ export class MovieIndexComponent implements OnInit, OnDestroy {
   ) {}
 
   moviesData!: Movie[];
-  moviesTitles!:string [];
+  moviesTitles!: string[];
   movies$!: Observable<Movie[]>;
-  boolean! :boolean[];
-  
+  boolean!: boolean[];
+
   subscription!: Subscription;
 
   ngOnInit(): void {
-   this.boolean = this.getBoolean()
-    this.moviesTitles = this.getTitle()
+    this.boolean = this.getBoolean();
+    this.moviesTitles = this.getTitle();
     this.movieService.query();
-    this.movieService.movies$.subscribe((movies :Movie[])=>{
-      
-      this.moviesData = movies
-      console.log( movies.length );
-      
-    })
-    
+    this.movieService.movies$.subscribe((movies: Movie[]) => {
+      this.moviesData = movies;
+      console.log(movies.length);
+    });
+
     // this.onAddData();
   }
 
-  onAddData() {
-    
-    
-  }
-  getBoolean(){
-    return [ 
-     true,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-    ]
+  onAddData() {}
+  getBoolean() {
+    return [ false, false,true, false, false, false, false, false];
   }
 
-  getTitle(){
-    return [ 
+  getTitle() {
+    return [
       'NETFLIX ORIGINALS',
       'Trending Now',
       'Top Rated',
@@ -63,7 +49,7 @@ export class MovieIndexComponent implements OnInit, OnDestroy {
       'Harrow Movies',
       'Romance Movies',
       'Documentaries',
-    ]
+    ];
   }
 
   onRemoveMovie(movieId: string) {

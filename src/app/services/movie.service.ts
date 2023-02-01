@@ -148,6 +148,9 @@ export class MovieService {
     this._movieData.push(movies);
   }
 
+  getMovieVideo(data: any): Observable<any> {
+    return this.http.get(`https://api.themoviedb.org/3/movie/${data}/videos?api_key=818089ca50e2db994d4a5864de664559&language=en-US`)
+  }
   // public addMovieToArray(movies: Movie[] | null) {
   //   movies!.forEach((movie) => {
   //     this._movieData.push(movie);

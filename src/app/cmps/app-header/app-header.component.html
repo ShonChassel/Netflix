@@ -10,12 +10,12 @@
 
             <div style="display: flex" *ngIf="logInUser">
                 <movie-filter ></movie-filter>
-                <img *ngIf="logInUser" src="http://occ-0-1853-1168.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABY5cwIbM7shRfcXmfQg98cqMqiZZ8sReZnj4y_keCAHeXmG_SoqLD8SXYistPtesdqIjcsGE-tHO8RR92n7NyxZpqcFS80YfbRFz.png?r=229" alt="">
+                <img (click)="setIsMenuOpen()" *ngIf="logInUser" src="http://occ-0-1853-1168.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABY5cwIbM7shRfcXmfQg98cqMqiZZ8sReZnj4y_keCAHeXmG_SoqLD8SXYistPtesdqIjcsGE-tHO8RR92n7NyxZpqcFS80YfbRFz.png?r=229" alt="">
+  
             </div>
-            
         </div>
         
             
 
-    
+        <user-menu-modal *ngIf="isMenuOpen"></user-menu-modal>
 </header>

@@ -14,6 +14,9 @@ import { FormsModule } from '@angular/forms';
 import { UserMsgComponent } from './cmps/user-msg/user-msg.component';
 import { HomeComponent } from './views/home/home.component';
 import { SignupScreenComponent } from './cmps/signup-screen/signup-screen.component';
+import { UserMenuModalComponent } from './cmps/user-menu-modal/user-menu-modal.component';
+import { TopTenComponent } from './cmps/top-ten/top-ten.component';
+import { VideoComponent } from './cmps/video/video.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { SignupScreenComponent } from './cmps/signup-screen/signup-screen.compon
     MovieFilterComponent,
     UserMsgComponent,
     HomeComponent,
-    SignupScreenComponent
+    SignupScreenComponent,
+    UserMenuModalComponent,
+    TopTenComponent,
+    VideoComponent
   ],
 
   imports: [

@@ -20,4 +20,6 @@ export class MoviePreviewComponent implements OnInit {
     ev.stopPropagation
     this.onRemove.emit(this.movie._id)
   }
+
+  
 }
