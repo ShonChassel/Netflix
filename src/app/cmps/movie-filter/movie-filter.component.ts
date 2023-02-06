@@ -12,8 +12,9 @@ export class MovieFilterComponent implements OnInit, OnDestroy {
   constructor(private movieService: MovieService) {}
 
   movieFilter!: MovieFilter;
-
   subscription!: Subscription;
+
+  filterOpen = false
 
   ngOnInit(): void {
    this.subscription = this.movieService.MovieFilter$.subscribe(movieFilter =>{
@@ -28,6 +29,11 @@ export class MovieFilterComponent implements OnInit, OnDestroy {
   onSetFilter(){
     this.movieService.setFilter({...this.movieFilter})
     // this.movieService.query();
+  }
+
+  openFilter(){
+    this.filterOpen = !this.filterOpen
+    console.log('this.filterOpen' ,this.filterOpen);
   }
 
 }

@@ -28,7 +28,6 @@ export class MovieIndexComponent implements OnInit, OnDestroy {
     this.movieService.query();
     this.movieService.movies$.subscribe((movies: Movie[]) => {
       this.moviesData = movies;
-      console.log(movies.length);
     });
 
     // this.onAddData();

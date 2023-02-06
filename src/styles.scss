@@ -18,17 +18,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // background-image: url(./app/assets/svgs/IL-en-20221228-popsignuptwoweeks-perspective_alpha_website_large.jpg);
-  
 }
 
-::ng-deep{
-  iframe.video{
-    body.trailer_iframe{
-  
+::ng-deep {
+  iframe.video {
+    body.trailer_iframe {
       height: 100vh !important;
     }
   }
-} 
+}
 
 .conainer {
   max-width: 1580px;
@@ -36,4 +34,10 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   padding: 20px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

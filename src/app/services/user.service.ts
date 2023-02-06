@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { User } from '../models/movie.model';
+import { Movie, User } from '../models/movie.model';
 import { StorageService } from './storage.service';
+import usersJson from '../data/users.json';
 
 @Injectable({
   providedIn: 'root',
@@ -8,45 +9,48 @@ import { StorageService } from './storage.service';
 export class UserService {
   constructor(private storageService: StorageService) {}
 
-  private _usersData: User[] = [];
+  private _usersData: User[] = usersJson;
 
-  public getById(user: object) {
-    console.log('user', user);
-    const users: any = localStorage.getItem('user');
+  public login(userCred: User) {
+    let users: User[] = [];
+    let usersData = localStorage.getItem('users');
+
+    if (!usersData) {
+      localStorage.setItem('users', JSON.stringify(this._usersData));
+      usersData = localStorage.getItem('users');
+    }
+
+    if (typeof usersData === 'string') {
+      users = JSON.parse(usersData);
+    }
+
+    const user = users.find((user) => user.password === userCred.password);
+    this._saveLoggedInUser(user);
+    return user;
   }
 
   public signup(userCred: User) {
-    console.log(userCred);
-    if(!userCred.name){
-      var users =  localStorage.getItem('users');
-      users = JSON.parse(users as string)
-      // const user = users.find(user => user.username === userCred.username)
-      
-    }
-
-    if (!userCred.imgUrl) {
-      userCred.imgUrl =
-        'http://occ-0-1853-1168.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABY5cwIbM7shRfcXmfQg98cqMqiZZ8sReZnj4y_keCAHeXmG_SoqLD8SXYistPtesdqIjcsGE-tHO8RR92n7NyxZpqcFS80YfbRFz.png?r=229';
-    }
-
-    this._usersData.unshift(userCred);
+    let user = this._setUser(userCred);
+    this._usersData.push(user);
     localStorage.setItem('users', JSON.stringify(this._usersData));
-
-    this._saveLocalUser(userCred);
   }
 
-  public getLoggedinUser() {
-    return sessionStorage.getItem('loggedinUser');
-  }
-
-  private _saveLocalUser(user: any) {
+  private _setUser(user: any) {
     user = {
-      _id: user._id,
+      _id: this._makeId(),
       name: user.name,
       email: user.email,
+      wishlist: [],
       password: user.password,
-      imgUrl: user.imgUrl,
+      imgUrl:
+        'https://res.cloudinary.com/dirvusyaz/image/upload/v1675602598/user_afazxl.png',
     };
+
+    this._saveLoggedInUser(user)
+    return user;
+  }
+
+  private _saveLoggedInUser(user: any) {
     sessionStorage.setItem('loggedinUser', JSON.stringify(user));
     return user;
   }
@@ -63,5 +67,21 @@ export class UserService {
 
   public logout() {
     sessionStorage.removeItem('loggedinUser');
+  }
+
+  public getLoggedinUser() {
+    return sessionStorage.getItem('loggedinUser');
+  }
+
+  public addToWishlist(movie: Movie) {
+    let loggedinUser: any = this.getLoggedinUser();
+
+    if (typeof loggedinUser === 'string') {
+      loggedinUser = JSON.parse(loggedinUser);
+    }
+
+
+    loggedinUser.wishlist.push(movie);
+    this._saveLoggedInUser(loggedinUser)
   }
 }

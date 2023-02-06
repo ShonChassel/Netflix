@@ -1,0 +1,17 @@
+[
+    {
+        "_id": "u101",
+        "name": "shon",
+        "password": "11",
+        "wishlist": [],
+        "imgUrl": "https://res.cloudinary.com/dirvusyaz/image/upload/v1675602598/user_afazxl.png"
+    },
+    {
+        "_id": "u102",
+        "name": "yael",
+        "password": "11",
+        "wishlist": [],
+        "imgUrl": "https://res.cloudinary.com/dirvusyaz/image/upload/v1675602598/user_afazxl.png"
+    }
+    
+]

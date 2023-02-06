@@ -1,12 +1,8 @@
-<section class="movie-top10"> 
-
-    <section class="info" *ngFor="let movie of movies ; let i = index"> 
-        <img src="{{imgsTopTen[i]}}" height="150px"  alt>
-        <img class="img-poster"
-        src="https://image.tmdb.org/t/p/original/{{ movie.poster_path}}" 
-        alt="{{movie.name}}">
+<h1>Top 10 TV Shows</h1>
+<section class="movie-top10" >
+    <section class="info" *ngFor="let movie of movies ; let i = index" [routerLink]="['/movie', movie.id]">
+        <img src="{{imgsTopTen[i]}}" height="150px" alt>
+        <img class="img-poster" src="https://image.tmdb.org/t/p/original/{{ movie.poster_path}}" alt="{{movie.name}}">
     </section>
-    
+
 </section>
-
-

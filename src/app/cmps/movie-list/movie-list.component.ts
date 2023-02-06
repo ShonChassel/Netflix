@@ -18,7 +18,7 @@ export class MovieListComponent implements OnInit {
   @Output() onRemove = new EventEmitter<string>();
 
   ngOnInit(): void {
-    console.log('movies', this.movies);
+    // console.log('movies', this.movies);
 
     //   this.movieService.query()
     //   this.getMovies()

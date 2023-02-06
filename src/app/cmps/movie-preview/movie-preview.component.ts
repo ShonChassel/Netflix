@@ -12,7 +12,6 @@ export class MoviePreviewComponent implements OnInit {
   @Output() onRemove = new EventEmitter <string>()
 
   ngOnInit(): void {
-    console.log(this.boolean);
     
   }
   

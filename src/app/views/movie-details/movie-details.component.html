@@ -1,7 +1,5 @@
 <section class="movie-details">
-  <div class="movie-image" style="background-image: url('https://image.tmdb.org/t/p/original{{movie?.backdrop_path}}'); 
-      background-size: cover;
-      background-position: inherit;">
+  <div class="movie-image" style="background-image: url('https://image.tmdb.org/t/p/original{{movie?.backdrop_path}}');">
   </div>
 
   <div class="detail-contents conainer">
@@ -15,8 +13,11 @@
 
       
     <div class="detail-btns">
-      <a class="detail-btn" href="{{getMovieVideoResult}}" allowfullscreen target="_blank">Play</a>
-      <a class="detail-btn">My List</a>
+      <a class="detail-btn" href="{{getMovieVideoResult}}" allowfullscreen target="_blank">
+        <img src="https://res.cloudinary.com/dirvusyaz/image/upload/v1675628670/Home_-_Netflix-4_j4ddma.svg" alt="">
+        Play</a>
+
+      <a class="detail-btn" (click)="addToList(movie)">My List</a>
     </div>
 
     <h1 class="movie-description">{{truncate(movie?.overview,150)}}</h1>

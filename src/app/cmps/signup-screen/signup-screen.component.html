@@ -10,6 +10,7 @@
                 <input [(ngModel)]="user.name"*ngIf="isSignUp" placeholder="Username" type="text" name="name" id="name"/>
                 <input [(ngModel)]="user.email" placeholder="Email" type="email" name="email" id="email"/>
                 <input [(ngModel)]="user.password" placeholder="Password" type="password" name="password" id="password" />
+                <p *ngIf="isNoMech">User not found</p>
                 <button type="submit">Sign In</button>
 
                 <h4>{{ !isSignUp ? 'New to Netflix? ' : '' }}<span (click)="setSignUp()">{{ !isSignUp ? 'Sign Up now.' :  'Sign In' }}</span>

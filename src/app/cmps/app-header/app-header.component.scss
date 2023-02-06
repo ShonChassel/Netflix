@@ -41,7 +41,13 @@ header {
     img {
       float: right;
       height: 2.25rem;
-      margin-left: 10px
+      margin-left: 10px;
+      border-radius: 3px;
+    }
+    .filterAndUser {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

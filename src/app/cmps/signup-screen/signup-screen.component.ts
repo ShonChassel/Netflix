@@ -18,6 +18,7 @@ export class SignupScreenComponent implements OnInit {
   @ViewChild('nameInput') elInput!: ElementRef<HTMLInputElement>;
 
   isSignUp = false;
+  isNoMech = false;
   user!: User;
 
   ngOnInit(): void {
@@ -30,11 +31,25 @@ export class SignupScreenComponent implements OnInit {
 
   setSignUp() {
     this.isSignUp = !this.isSignUp;
-    console.log('this.isSignUp', this.isSignUp);
   }
 
   onSaveUser() {
-    this.userService.signup(this.user)
-    this.router.navigateByUrl('movie');
+    if(this.user.name && this.user.email && this.user.password ){
+      this.userService.signup(this.user)
+      this.router.navigateByUrl('movie');
+    }else{
+     let user =  this.userService.login(this.user)
+     console.log(user);
+
+     if(user){
+      this.router.navigateByUrl('movie');
+      this.isNoMech = false
+    }else{
+       this.isNoMech = true
+
+     }
+
+    }
+
   }
 }

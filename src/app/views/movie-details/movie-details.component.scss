@@ -1,6 +1,8 @@
 .movie-details {
   color: white;
   .movie-image {
+    background-position: inherit;
+    background-size: cover;
     position: fixed !important;
     top: 0;
     left: 0;
@@ -28,7 +30,12 @@
       max-width: 360px;
       height: 80px;
     }
+    .detail-btns {
+      display: flex;
+    }
     .detail-btn {
+      display: flex;
+      align-items: center;
       cursor: pointer;
       color: #fff;
       outline: none;
@@ -42,6 +49,10 @@
       background-color: rgba(51, 51, 51, 0.5);
       padding-bottom: 0.5rem;
       text-decoration: none;
+
+      img {
+        height: 15px;
+      }
     }
     .detail-btn:hover {
       color: #000;
@@ -50,7 +61,7 @@
     }
   }
   .details-fadeBottom {
-    height: 17.4rem;
+    height: 18.5rem;
     background-image: linear-gradient(
       180deg,
       transparent,
@@ -59,19 +70,24 @@
     );
   }
 
-  .video{
+  .video {
     display: flex;
     position: absolute;
     transform: translate(60%, 0%);
-
   }
 }
 
-iframe.video{
-  body.trailer_iframe{
-
+iframe.video {
+  body.trailer_iframe {
     height: 100vh;
   }
 }
 
-
+@media (max-width: 440px) {
+  .movie-image {
+    background-position: bottom !important;
+  }
+  .details-fadeBottom {
+    height: 4.5rem !important;
+  }
+}

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of, throwError } from 'rxjs';
 import { map, catchError, retry } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
@@ -32,13 +32,13 @@ export class MovieService {
       .flat()
       .filter((obj: Movie) => obj.title === filterBy.term) as Movie[];
 
-    console.log(filteredMovies);
+    
 
     if (!filteredMovies.length) {
       filteredMovies = this._movieData;
     }
     
-    console.log(filteredMovies);
+    
     // filteredMovies = [[...filteredMovies]]
     this._movies$.next(filteredMovies);
   }
@@ -56,8 +56,8 @@ export class MovieService {
   }
 
   public getById(movieId: number): Observable<Movie> {
-    console.log('movieId in service', movieId);
-    console.log('this._movieData', this._movieData);
+    // console.log('movieId in service', movieId);
+    // console.log('this._movieData', this._movieData);
     let res;
     for (let i = 0; i < this._movieData.length; i++) {
       const moviesList = this._movieData[i];
@@ -81,7 +81,6 @@ export class MovieService {
   }
 
   public setFilter(movieFilter: MovieFilter) {
-    console.log('movieFilter', movieFilter);
 
     this._movieFilter$.next(movieFilter);
     this.query();
@@ -151,29 +150,11 @@ export class MovieService {
   getMovieVideo(data: any): Observable<any> {
     return this.http.get(`https://api.themoviedb.org/3/movie/${data}/videos?api_key=818089ca50e2db994d4a5864de664559&language=en-US`)
   }
-  // public addMovieToArray(movies: Movie[] | null) {
-  //   movies!.forEach((movie) => {
-  //     this._movieData.push(movie);
-  //   });
-  //   console.log('this._movieData', this._movieData);
-  // }
+
+  saveMovies(){
+  }
+
 }
 
-// private getMovie() {
-//   return this.http
-//     .get<{ answer: string }>(
-//       `https://api.themoviedb.org/3/movie/top_rated?api_key=818089ca50e2db994d4a5864de664559&language=en-US`
 
-//     )
-//     .pipe(
-//       map((res) => {
-//         return res;
-//       }),
-//       retry(1),
-//       catchError((err: HttpErrorResponse) => {
-//         console.log('err:', err);
-//         return throwError(() => err);
-//       })
-//     );
-// }
-// https://api.themoviedb.org/3/trending/all/week?api_key=818089ca50e2db994d4a5864de664559&language=en-US
+

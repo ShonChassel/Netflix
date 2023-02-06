@@ -10,6 +10,5 @@ export class HomeComponent implements OnInit {
   isSignIn = false;
 
   ngOnInit(): void {
-    console.log('this.signIn', this.isSignIn);
   }
 }
